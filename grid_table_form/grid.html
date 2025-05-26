@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Grid Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef2f3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header header"
+        "left-ad main-content sidebar right-ad"
+        "left-ad twin1 twin2 right-ad"
+        "footer footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 15px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .grid-container > div {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .header {
+      grid-area: header;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    }
+
+    .advertise.left, .advertise.right {
+      background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+    }
+
+    .advertise.left {
+      grid-area: left-ad;
+    }
+
+    .advertise.right {
+      grid-area: right-ad;
+    }
+
+    .main-content {
+      grid-area: main-content;
+      background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+    }
+
+    .twin:nth-of-type(6) {
+      grid-area: twin1;
+      background: linear-gradient(135deg, #f953c6 0%, #b91d73 100%);
+    }
+
+    .twin:nth-of-type(7) {
+      grid-area: twin2;
+      background: linear-gradient(135deg, #ff5858 0%, #f09819 100%);
+    }
+
+    .footer {
+      grid-area: footer;
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">Header Section</div>
+    <div class="advertise left">Left Advertisement</div>
+    <div class="main-content">Main Content Area</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="advertise right">Right Advertisement</div>
+    <div class="twin">Twin Box 1</div>
+    <div class="twin">Twin Box 2</div>
+    <div class="footer">Footer Section</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Routine Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #e0f7fa, #e1bee7);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #d1d1d1;
+      padding: 14px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    thead th {
+      background-color: #7b1fa2;
+      color: white;
+      font-size: 15px;
+    }
+
+    tbody td {
+      background-color: #f3e5f5;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .lunch {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      font-weight: bold;
+      background-color: #b2dfdb;
+      color: #004d40;
+    }
+
+    tbody tr:nth-child(even) td {
+      background-color: #ede7f6;
+    }
+
+    tbody td[colspan] {
+      background-color: #ce93d8 !important;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mb-5">📚 Weekly Class Routine</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Day/Period</th>
+          <th>I<br>9:00–9:50</th>
+          <th>II<br>10:00–10:50</th>
+          <th>III<br>11:00–11:50</th>
+          <th>IV<br>12:00–12:50</th>
+          <th>1:00–2:00</th>
+          <th>V<br>2:00–2:50</th>
+          <th>VI<br>3:00–3:50</th>
+          <th>VII<br>4:00–4:50</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Saturday</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>ICT-4105</td>
+          <td rowspan="6" class="lunch">LUNCH</td>
+          <td>ICT-4111</td>
+          <td>ICT-4103</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td></td>
+          <td colspan="2">ICT-4110</td>
+          <td>ICT-4111</td>
+          <td colspan="2">ICT-4103</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td></td>
+          <td colspan="2">ICT-4101</td>
+          <td>ICT-4111</td>
+          <td colspan="2">ICT-4108</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td colspan="2">ICT-4112</td>
+          <td>ICT-4101</td>
+          <td>ICT-4107</td>
+          <td colspan="2">ICT-4112</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td colspan="2">ICT-4107</td>
+          <td colspan="2">ICT-4105</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

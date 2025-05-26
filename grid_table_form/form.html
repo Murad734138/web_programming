@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 360px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 30px;
+      color: #2c3e50;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 18px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #5dade2;
+      outline: none;
+      background-color: #fff;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .forgot-password a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      background: linear-gradient(to right, #00c9ff, #92fe9d);
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: linear-gradient(to right, #00b4db, #62f594);
+    }
+
+    .signup-text {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .signup-text a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <div class="forgot-password">
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" class="login-btn">Log In</button>
+    </form>
+    <div class="signup-text">
+      Don’t have an account? <a href="#">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>
