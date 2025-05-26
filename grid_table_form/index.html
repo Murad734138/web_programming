@@ -2,224 +2,192 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment - Muraduzzaman Asha</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
-        body {
-            background: #f8f9fa;
-            font-family: 'Times New Roman', serif;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
 
-        .assignment-header {
-            background: white;
-            border: 2px solid #000;
-            margin: 20px auto;
-            max-width: 800px;
-        }
+    .navbar {
+      background-color: #4a148c;
+    }
 
-        .assignment-row {
-            display: flex;
-            border-bottom: 2px solid #000;
-        }
+    .navbar-brand,
+    .nav-link,
+    .dropdown-item {
+      color: #fff !important;
+    }
 
-        .assignment-row:last-child {
-            border-bottom: none;
-        }
+    .dropdown-menu {
+      background-color: #6a1b9a;
+    }
 
-        .assignment-col {
-            flex: 1;
-            padding: 15px 20px;
-            border-right: 2px solid #000;
-        }
+    .dropdown-item:hover {
+      background-color: #8e24aa;
+    }
 
-        .assignment-col:last-child {
-            border-right: none;
-        }
+    .header-card {
+      background: white;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
 
-        .assignment-col h5 {
-            margin: 0 0 10px 0;
-            font-weight: bold;
-            font-size: 16px;
-        }
+    .header-card h4 {
+      color: #4a148c;
+      margin-bottom: 15px;
+    }
 
-        .assignment-col p {
-            margin: 5px 0;
-            font-size: 14px;
-            line-height: 1.4;
-        }
+    .section-card {
+      background: white;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      display: none;
+    }
 
-        .content-section {
-            display: none;
-            max-width: 800px;
-            margin: 30px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    .section-card.active {
+      display: block;
+    }
 
-        .content-section.active {
-            display: block;
-        }
+    .section-card h3 {
+      border-bottom: 2px solid #6a1b9a;
+      color: #6a1b9a;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
 
-        .content-section h3 {
-            color: #0d6efd;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 10px;
-        }
+    .section-card ul {
+      padding-left: 20px;
+    }
 
-        .content-section ul {
-            list-style: square;
-            padding-left: 25px;
-        }
+    .section-card li {
+      margin-bottom: 10px;
+    }
 
-        .content-section li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-    </style>
+    .nav-link.active {
+      font-weight: bold;
+    }
+
+    .icon-title {
+      font-size: 1.1rem;
+      color: #6a1b9a;
+    }
+  </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Assignment</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                        About Me
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" data-section="education">Education</a></li>
-                        <li><a class="dropdown-item" data-section="skills">Skills</a></li>
-                        <li><a class="dropdown-item" data-section="projects">Projects</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="form.html">Form</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="grid.html">Grid</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="table.html">Table</a>
-                </li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Assignment</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Me</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-section="education">Education</a></li>
+              <li><a class="dropdown-item" data-section="skills">Skills</a></li>
+              <li><a class="dropdown-item" data-section="projects">Projects</a></li>
             </ul>
-        </div>
-    </div>
-</nav>
-
-
-
-    <!-- Assignment Header -->
-    <div class="assignment-header">
-        <div class="assignment-row">
-            <div class="assignment-col">
-                <h5>Submitted By,</h5>
-                <p><strong>Name: Muraduzzaman Asha</strong></p>
-                <p><strong>ID: IT-21014, Session: 2020-2021</strong></p>
-                <p><strong>Year: 4<sup>th</sup>, Semester: 1<sup>st</sup></strong></p>
-                <p><strong>Dept. of ICT, MBSTU</strong></p>
-            </div>
-            <div class="assignment-col">
-                <h5>Submitted To,</h5>
-                <p><strong>Md. Anowar Kabir</strong></p>
-                <p><strong>Lecturer,</strong></p>
-                <p><strong>Dept. of ICT, MBSTU</strong></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Content Sections -->
-    <div id="education" class="content-section active">
-        <h3>Education</h3>
-        <ul>
-            <li><strong>B.Sc. in Information and Communication Technology (ICT)</strong><br>
-                Mawlana Bhashani Science and Technology University (MBSTU)<br>
-                <em>• CGPA: 3.53/4.00</em>
-            </li>
-            <li><strong>Higher Secondary Certificate (HSC)</strong><br>
-                Science • Shahid Syed Nazrul Islam College,Mymensingh<br>
-                <em>Year: 2019 • GPA: 4.83/5.00</em>
-            </li>
-            <li><strong>Secondary School Certificate (SSC)</strong><br>
-                Science  •Sristy Central School & College,Jamalpur<br>
-                <em>Year: 2017 • GPA: 5.00/5.00</em>
-            </li>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Form</a></li>
+          <li class="nav-item"><a class="nav-link" href="grid.html">Grid</a></li>
+          <li class="nav-item"><a class="nav-link" href="table.html">Table</a></li>
         </ul>
+      </div>
     </div>
+  </nav>
 
-    <div id="skills" class="content-section">
-        <h3>Technical Skills</h3>
-        <ul>
-            <li><strong>Programming Languages:</strong> C/C++, Python, JavaScript, Java, PHP</li>
-            <li><strong>Web Technologies:</strong> HTML5, CSS3, Bootstrap</li>
-            <li><strong>Database:</strong> MySQL</li>
-            <li><strong>Tools & Frameworks:</strong> Git, Django</li>
-    
-        </ul>
+  <!-- Assignment Header -->
+  <div class="header-card text-center">
+    <div class="row">
+      <div class="col-md-6 border-end">
+        <h4>Submitted By</h4>
+        <p><strong>Name:</strong> Muraduzzaman Asha</p>
+        <p><strong>ID:</strong> IT-21014</p>
+        <p><strong>Session:</strong> 2020-2021</p>
+        <p><strong>Year:</strong> 4<sup>th</sup>, Semester: 1<sup>st</sup></p>
+        <p><strong>Dept. of ICT, MBSTU</strong></p>
+      </div>
+      <div class="col-md-6">
+        <h4>Submitted To</h4>
+        <p><strong>Md. Anowar Kabir</strong></p>
+        <p><strong>Lecturer</strong></p>
+        <p><strong>Dept. of ICT, MBSTU</strong></p>
+      </div>
     </div>
+  </div>
 
-    <div id="projects" class="content-section">
-        <h3>Projects</h3>
-        <ul>
-            <li><strong>Smart Water Trank</strong>
-                <ul>
-                    <li>An arduino based project </li>
-                    <li>Detectn water level and automatic motor on/off system.
-                    </li>
-                </ul>
-            </li>
-            <li><strong>Currency-Converter-Tkinter</strong>
-                <ul>
-                    <li>Full-stack web application with user authentication</li>
-                    <li>Technologies: Django</li>
-                </ul>
-            </li>
-            <li><strong>Personal Portfolio Website</strong>
-                <ul>
-                    <li>Responsive portfolio built with Google Sites & github.io</li>
-                    <li>Showcases projects, skills, and academic achievements</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+  <!-- Sections -->
+  <div id="education" class="section-card active">
+    <h3>🎓 Education</h3>
+    <ul>
+      <li><strong>B.Sc. in ICT</strong> — MBSTU <br> <em>CGPA: 3.53/4.00</em></li>
+      <li><strong>HSC</strong> — Shahid Syed Nazrul Islam College <br> <em>2019 • GPA: 4.83</em></li>
+      <li><strong>SSC</strong> — Sristy Central School & College <br> <em>2017 • GPA: 5.00</em></li>
+    </ul>
+  </div>
 
-    <script>
-        // Handle dropdown menu clicks
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function (e) {
-                e.preventDefault();
+  <div id="skills" class="section-card">
+    <h3>💻 Skills</h3>
+    <ul>
+      <li><strong>Languages:</strong> C/C++, Python, JavaScript, Java, PHP</li>
+      <li><strong>Web:</strong> HTML5, CSS3, Bootstrap</li>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>Tools:</strong> Git, Django</li>
+    </ul>
+  </div>
 
-                const targetSection = this.getAttribute('data-section');
+  <div id="projects" class="section-card">
+    <h3>📂 Projects</h3>
+    <ul>
+      <li><strong>Smart Water Tank</strong> (Arduino based)<br>
+        Detects water level and controls motor automatically.
+      </li>
+      <li><strong>Currency Converter - Tkinter</strong><br>
+        A Python desktop app for currency conversion.
+      </li>
+      <li><strong>Portfolio Website</strong><br>
+        Personal site hosted on GitHub & Google Sites.
+      </li>
+    </ul>
+  </div>
 
-                // Hide all content sections
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
-                });
+  <script>
+    // Handle dropdown navigation
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
 
-                // Show target section
-                document.getElementById(targetSection).classList.add('active');
+        const section = this.getAttribute('data-section');
 
-                // Close dropdown
-                const dropdown = bootstrap.Dropdown.getInstance(this.closest('.dropdown').querySelector('.dropdown-toggle'));
-                if (dropdown) {
-                    dropdown.hide();
-                }
-            });
-        });
-    </script>
+        // Hide all sections
+        document.querySelectorAll('.section-card').forEach(s => s.classList.remove('active'));
+
+        // Show the selected section
+        document.getElementById(section).classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 
 </html>
